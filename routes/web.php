@@ -29,3 +29,8 @@ Route::get('about', [
     'uses' => 'PagesController@about',
     'as' => 'pages.about'
 ]);
+
+Route::get('contact', [
+    'uses' => 'PagesController@contact', 
+    'as' => 'pages.contact'
+]);

@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container py-5">
         <div class="row">
             {{-- profile image --}}
             <div class="col-md-3 mb-4 mb-lg-0">
                 <div class="card card-body">
-                    <img src="" alt="">
+                    <img src="{{ asset('images/logo.png') }}" alt="" class="img-fluid">
                 </div>
             </div>
             <div class="col-md-9">

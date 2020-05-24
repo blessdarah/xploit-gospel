@@ -39,7 +39,7 @@
                 </li>
 
                  <li class="nav-item">
-                    <a href="/home" class="nav-link">
+                    <a href="{{ route('pages.contact') }}" class="nav-link">
                         contact
                     </a>
                 </li>
