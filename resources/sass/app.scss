@@ -6,3 +6,8 @@
 @import '~font-awesome/scss/font-awesome.scss';
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+// custom styling
+@import 'utilities';
+@import 'carousel';
+@import 'playlist';
+@import 'banner';

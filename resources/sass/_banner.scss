@@ -1,0 +1,16 @@
+.page-banner {
+    position: relative;
+    &-image {
+        height: 30rem !important;
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 77%, 0 100%);
+    }
+    &-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 4rem;
+        font-weight: bold;
+    }
+}

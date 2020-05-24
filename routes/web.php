@@ -23,3 +23,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::Resource("profile", "ProfilesController");
+
+// Pages route
+Route::get('about', [
+    'uses' => 'PagesController@about',
+    'as' => 'pages.about'
+]);

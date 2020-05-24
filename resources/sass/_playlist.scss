@@ -1,0 +1,11 @@
+.playlist {
+    &__item {
+        &__image {
+            --size: 100px;
+            float: left;
+            width: var(--size);
+            height: var(--size);
+            margin-right: 1rem;
+        }
+    }
+}

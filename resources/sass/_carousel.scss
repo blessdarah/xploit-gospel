@@ -1,0 +1,25 @@
+.carousel-item {
+    height: 50vh !important;
+    img {
+        object-fit: cover;
+        height: 100% !important;
+    }
+    .carousel-caption {
+        bottom: 30% !important;
+        &__title {
+            font-size: 2.6rem;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .carousel-item {
+        height: 80vh !important;
+    }
+    .carousel-caption {
+        bottom: 50% !important;
+        &__title {
+            font-size: 6rem;
+        }
+    }
+}

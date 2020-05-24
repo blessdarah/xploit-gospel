@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name', 'Xploit Gospel') }} <i class="ni ni-air-baloon"></i>
+            <img src="{{ asset('images/xploit-gospel-colored.svg') }}" alt="{{ config('app.name', 'Xploit Gospel') }}">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
@@ -11,7 +11,7 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a href="/home" class="nav-link">
+                    <a href="/" class="nav-link">
                        home
                     </a>
                 </li>
@@ -33,22 +33,28 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{ route('pages.about') }}" class="nav-link">
+                        about
+                    </a>
+                </li>
+
+                 <li class="nav-item">
                     <a href="/home" class="nav-link">
-                        events
+                        contact
                     </a>
                 </li>
             </ul>
 
             <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto align-items-center">
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a class="btn btn-danger btn-sm py-2 px-3" href="{{ route('login') }}">{{ __('Login') }}</a>
                     </li>
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="btn btn-primary btn-sm py-2 px-3" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                     @endif
                 @else

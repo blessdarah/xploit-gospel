@@ -2,14 +2,15 @@
 
 @section('content')
 <div class="container mt-5">
-    <div class="row justify-content-center no-gutters mx-lg-5">
+    <div class="row justify-content-center no-gutters">
         {{-- empty column --}}
-        <div class="col-md-4 bg-primary shadow">
-
+        <div class="col-md-5 bg-primary shadow">
+            <img src="{{ asset('images/sax.jpg') }}" alt="" class="img-fluid h-100">
         </div>
-        <div class="col-md-6 col-lg-4 shadow">
-            <div class="card border-0 bg-light py-lg-5 px-3">
+        <div class="col-md-6 col-lg-5 shadow">
+            <div class="card border-0 py-lg-5 px-3">
                 <div class="card-body">
+                    <h3 class="font-weight-600">Login to account</h3>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -55,6 +56,7 @@
                              <button type="submit" class="btn btn-primary btn-block px-5">
                                 {{ __('Login') }}
                             </button>
+                            <p class="text-center mt-3">Don't have an account? <a href="{{url('register') }}">Signup</a></p>
                         </div>
                     </form>
                 </div>

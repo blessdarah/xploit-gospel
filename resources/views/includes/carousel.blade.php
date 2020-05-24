@@ -6,9 +6,9 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
             <img class="d-block w-100" src="{{ asset('images/sax.jpg') }}" alt="Landing page iamge">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Xploit gospel</h5>
-                    <p>Showcasing Cameroon's gospel</p>
+                <div class="carousel-caption">
+                    <h5 class="carousel-caption__title text-white font-weight-800">Xploit gospel</h5>
+                    <p class="carousel-caption__text d-none d-md-block">Showcasing Cameroon's gospel</p>
                 </div>
             </div>
         </div>
