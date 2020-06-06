@@ -41,3 +41,9 @@ Route::post('contact', [
     'uses' => 'UtilsController@contact',
     'as' => 'contact.store'
 ]);
+
+/* User dashboard routes */
+Route::get('list-posts', [
+    'uses' => 'DashboardController@list_posts',
+    'as' => 'dashboard.list-posts'
+]);

@@ -1,6 +1,6 @@
 <div class="form-group">
     <label for="title">Post title</label>
-    <input id="title" class="form-control" type="text" name="title" value="{{ old('title') ?? '' }}">
+    <input id="title" class="form-control" type="text" name="title" value="{{ $post->title ?? old('title') ?? '' }}">
 </div>
 
 {{-- image preview --}}
@@ -15,5 +15,5 @@
 
 <div class="form-group">
     <label for="body">Post content</label>
-    <textarea id="body" class="form-control" name="body" rows="3">{{ old('body') ?? '' }}</textarea>
+    <textarea id="body" class="form-control" name="body" rows="3">{{ $post->body ?? old('body') ?? '' }}</textarea>
 </div>

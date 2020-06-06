@@ -1,8 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
-    <section class="py-5">
-        <div class="container">
+    <div class="card">
+        <div class="card-header">Create new post <button class="btn btn-sm btn-link float-right" onclick="window.history.back()">< go back</button></div>
+        <div class="card-body">
             <form method="POST" action="{{ route('posts.store') }}" >
                 @csrf
                 @method('POST')
@@ -10,5 +11,6 @@
                 <button type="submit" class="btn btn-default">Create post</button>
             </form>
         </div>
-    </section>
+    </div>
+
 @endsection
