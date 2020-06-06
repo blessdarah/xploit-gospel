@@ -28,8 +28,13 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="/home" class="nav-link">
+                    <a href="{{ route('events.index') }}" class="nav-link">
                         events
+                    </a>
+                </li>
+                <li class="nav-item">
+                <a href="{{ route('posts.index') }}" class="nav-link">
+                        blog
                     </a>
                 </li>
                 <li class="nav-item">

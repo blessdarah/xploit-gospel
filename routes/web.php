@@ -23,6 +23,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::Resource("profile", "ProfilesController");
+Route::Resource("events", "EventController");
+Route::Resource("posts", "PostController");
 
 // Pages route
 Route::get('about', [
@@ -33,4 +35,9 @@ Route::get('about', [
 Route::get('contact', [
     'uses' => 'PagesController@contact', 
     'as' => 'pages.contact'
+]);
+
+Route::post('contact', [
+    'uses' => 'UtilsController@contact',
+    'as' => 'contact.store'
 ]);

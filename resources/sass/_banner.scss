@@ -1,8 +1,9 @@
 .page-banner {
     position: relative;
     &-image {
-        height: 30rem !important;
+        // height: 30rem !important;
         width: 100%;
+        object-fit: cover;
         clip-path: polygon(0 0, 100% 0, 100% 77%, 0 100%);
     }
     &-title {

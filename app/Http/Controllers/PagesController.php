@@ -11,6 +11,7 @@ class PagesController extends Controller
     }
 
     public function contact() {
+        toastr()->success('about page');
         return view('pages.contact');
     }
 }
