@@ -52,4 +52,11 @@ class User extends Authenticatable
     public function posts() {
         return $this->hasMany(Post::class);
     }
+
+    /**
+     * @return Album all album by this user
+     */
+    public function albums() {
+        return $this->hasMany(Album::class);
+    }
 }

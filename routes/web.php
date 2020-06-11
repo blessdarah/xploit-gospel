@@ -25,6 +25,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::Resource("profile", "ProfilesController");
 Route::Resource("events", "EventController");
 Route::Resource("posts", "PostController");
+Route::Resource("albums", "AlbumController");
 
 // Pages route
 Route::get('about', [
@@ -46,4 +47,9 @@ Route::post('contact', [
 Route::get('list-posts', [
     'uses' => 'DashboardController@list_posts',
     'as' => 'dashboard.list-posts'
+]);
+
+Route::get('list-albums', [
+    'uses' => 'AlbumController@list_albums',
+    'as' => 'albums.list-albums'
 ]);
