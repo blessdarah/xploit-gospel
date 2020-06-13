@@ -63,7 +63,7 @@ class PostController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     *   the form for editing the specified resource.
      *
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response

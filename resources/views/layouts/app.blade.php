@@ -11,6 +11,8 @@
             @yield('content')
         </main>
     </div>
+    {{-- footer --}}
+    @include('includes.footer')
 
     <script src="{{ URL::asset('js/argon-design-system.min.js') }}"></script>
     {{-- custom scripts on main pages --}}

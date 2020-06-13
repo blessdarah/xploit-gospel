@@ -16,7 +16,7 @@ use phpDocumentor\Reflection\Types\Resource_;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Auth::routes();
 
@@ -53,3 +53,5 @@ Route::get('list-albums', [
     'uses' => 'AlbumController@list_albums',
     'as' => 'albums.list-albums'
 ]);
+
+Route::resource('banner', "BannerController");
