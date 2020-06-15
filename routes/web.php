@@ -49,9 +49,19 @@ Route::get('list-posts', [
     'as' => 'dashboard.list-posts'
 ]);
 
+Route::get('list-events', [
+    'uses' => 'DashboardController@list_events',
+    'as' => 'events.list-events'
+]);
+
 Route::get('list-albums', [
     'uses' => 'AlbumController@list_albums',
     'as' => 'albums.list-albums'
+]);
+
+Route::get('gallery-albums', [
+    'uses' => 'DashboardController@gallery_albums',
+    'as' => 'gallery.albums'
 ]);
 
 Route::resource('banner', "BannerController");

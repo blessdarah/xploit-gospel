@@ -4,9 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Album;
 use Illuminate\Http\Request;
+use App\Http\Requests\AlbumRequest;
 
 class AlbumController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +20,7 @@ class AlbumController extends Controller
      */
     public function index()
     {
-        //
+        return view('album.index')->with('albums', Album::all());
     }
 
     /**
@@ -33,9 +39,10 @@ class AlbumController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AlbumRequest $request)
     {
-        //
+        Album::create($request->validated());
+        return redirect()->route('albums.index');
     }
 
     /**
@@ -46,7 +53,7 @@ class AlbumController extends Controller
      */
     public function show(Album $album)
     {
-        //
+        return view('album.show')->with('album', $album);
     }
 
     /**
@@ -57,7 +64,7 @@ class AlbumController extends Controller
      */
     public function edit(Album $album)
     {
-        //
+        return view('album.edit')->with('album', $album);
     }
 
     /**
@@ -67,9 +74,10 @@ class AlbumController extends Controller
      * @param  \App\Album  $album
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Album $album)
+    public function update(AlbumRequest $request, Album $album)
     {
-        //
+        $album->update($request->validated());
+        return redirect()->route('album.index');
     }
 
     /**
@@ -80,7 +88,8 @@ class AlbumController extends Controller
      */
     public function destroy(Album $album)
     {
-        //
+        $album->delete();
+        return redirect()->route('albums.index');
     }
 
     public function list_albums() {

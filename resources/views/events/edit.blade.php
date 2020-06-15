@@ -1,8 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
-    <section class="py-5">
-        <div class="container">
+    <div class="card">
+        <div class="card-header">
+            Edit event
+        </div>
+        <div class="card-body">
             <form method="POST" action="{{ route('events.edit', $event->id) }}" >
                 @csrf
                 @method('PATCH')
@@ -10,5 +13,5 @@
                 <button type="submit" class="btn btn-default">Edit event</button>
             </form>
         </div>
-    </section>
+    </div>
 @endsection

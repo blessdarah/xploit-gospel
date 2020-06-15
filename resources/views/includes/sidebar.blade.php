@@ -13,18 +13,16 @@
         <a href="{{ route('banner.index') }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
             Banner
         </a>
-        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+        <a href="{{ route('events.list-events') }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
             Events
         </a>
-        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+        <a href="{{ route('gallery.list-albums') }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
             gallery
         </a>
    </ul>
 @endif
 <ul class="list-group">
     <a href="{{ route('welcome') }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">home</a>
-
-    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">albums <span class="badge badge-circle badge-danger">3</span></a>
 
     <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">lyrics <span class="badge badge-circle badge-success">8</span></a>
 

@@ -26,15 +26,20 @@ class BannerController extends Controller
         return redirect()->back();
     }
 
+    public function show(Banner $banner) {
+        return view('admin.banner.edit')->with('banner', $banner);
+    }
+
     public function edit() {
         return view('admin.banner.update');
     }
 
-    public function update(Banner $banner) {
-        
+    public function update(BannerRequest $request, Banner $banner) {
+        $banner->update($request->validated());
+        return redirect()->route('banner.index');
     }
 
-    public function delete(Banner $banner) {
+    public function destroy(Banner $banner) {
         $banner->delete();
         return redirect()->back();
     }
